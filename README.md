@@ -1,6 +1,6 @@
 # Simple-DataTables-classic
 
-A lightweight, extendable, dependency-free javascript HTML table plugin that also works in **older browsers**. Similar to jQuery DataTables, but without the jQuery dependency. See [Simple-DataTables](https://github.com/fiduswriter/Simple-DataTables) for a version that uses up-to-date technology and only targets current browsers.
+A lightweight, extendable, dependency-free javascript HTML table plugin **that also works in older browsers**. Similar to jQuery DataTables, but without the jQuery dependency. See [Simple-DataTables](https://github.com/fiduswriter/Simple-DataTables) for a version that uses up-to-date technology and only targets current browsers.
 
 Based on [Vanilla-DataTables](https://github.com/Mobius1/Vanilla-DataTables), but written in ES2018.
 
