@@ -6,7 +6,7 @@
   <title>Column Manipulation</title>
 
   <!-- CDN -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables-classic@latest/dist/style.css"> -->
 
   <!-- DataTable Styles -->
   <link rel="stylesheet" href="../../src/style.css">
@@ -18,7 +18,7 @@
   <h1>Column Manipulation</h1>
   <table class="table"></table>
   <!-- CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables-classic@latest"></script>
 
   <!-- Custom Code -->
   <script>
@@ -31,7 +31,7 @@
         // return data + " (" + (~~(Math.random() * (70 - 18) + 18)) + ")";
         return `${data} (${(~~(Math.random() * (70 - 18) + 18))})`;
       }
-    }, { 
+    }, {
       // select the fourth column ...
       select: 3,
 
@@ -40,7 +40,7 @@
 
       // ... pass the correct datetime format ...
       format: "YYYY/MM/DD",
-    
+
       // ... sort it ...
       sort: "desc",
     }];
@@ -68,14 +68,14 @@
 
       fetch(url).then(function (response) { return response.json(); })
         .then(function (column) {
-        
+
           // Render a button
           column.render =  function (data, cell, row) {
             // the dataIndex property is the correct index of the row in the data array, not the rowIndex
             // which will be -1 if not rendered or wrong if the we're not on page 1
             return data + "<button type='button' data-id='" + row.dataIndex + "' class='btn btn-sm btn-primary pull-right notify'>Click Me</button>";
           };
-        
+
           datatable.columns().add(column);
         });
     });

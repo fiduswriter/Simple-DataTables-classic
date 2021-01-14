@@ -6,7 +6,7 @@
   <title>Render Column Cells</title>
 
   <!-- CDN -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables-classic@latest/dist/style.css"> -->
 
   <!-- DataTable Styles -->
   <link rel="stylesheet" href="../../src/style.css">
@@ -32,9 +32,9 @@
 <body>
   <h1>Render Column Cells</h1>
   <table id="drinks"></table>
-  
+
   <!-- CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables-classic@latest"></script>
 
   <!-- Custom Code -->
   <script>
@@ -92,7 +92,7 @@
     else if (data == 'false') {
       return row.classList.add("no"), `<b>No</b>`;
     }
-    
+
     // Or if you don't need to add class to the "row"
     // return data == 'true' ? '<b class="yes">Yes</b>' : '<b class="no">No</b>';
   }
