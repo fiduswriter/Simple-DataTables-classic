@@ -42,6 +42,13 @@ export const createElement = (nodeName, attrs) => {
 export const flush = el => {
     if (el instanceof NodeList) {
         el.forEach(e => flush(e))
+    } else if (el instanceof Object) {
+        // IE fix - recognises NodeList as Object
+        if (Object.prototype.hasOwnProperty.call(el, 'length')) {
+            el.forEach(e => flush(e));
+        } else {
+            el.innerHTML = "";
+        }
     } else {
         el.innerHTML = ""
     }
